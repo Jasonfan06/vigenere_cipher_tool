@@ -1,24 +1,25 @@
 # Vigenère Cipher TUI Tool
 
-A powerful, interactive Vigenère Cipher tool built with Python. This tool allows for encryption, decryption, and automatic decryption of messages using various cryptanalysis techniques, all within a text-based user interface (TUI) powered by the `rich` library.
+A no-nonsense, interactive tool for encrypting, decrypting, and breaking Vigenère ciphers. Built with Python and the `rich` library for a smooth text-based user interface (TUI). Perfect for anyone interested in cryptography or just looking to mess around with ciphers.
 
 ## Features
 
-- **Encrypt**: Encrypt plaintext using a specified keyword.
-- **Decrypt**: Decrypt ciphertext using a specified keyword.
-- **Auto-Decrypt**: Attempt to decrypt ciphertext without a keyword using:
-  - **Kasiski Examination** for identifying probable key lengths.
-  - **Friedman Test** to statistically estimate the key length.
-  - **Frequency Analysis** to deduce individual keyword shifts.
-  
+- **Encrypt**: Give it some text and a keyword, and it’ll spit out the encrypted result.
+- **Decrypt**: Feed it an encrypted message with the correct keyword, and it’ll decrypt it for you.
+- **Auto-Decryption**: Don’t have the keyword? No problem. This tool will take a shot at breaking the cipher for you using:
+  - **Kasiski Examination**: Finds repeating patterns to guess the key length.
+  - **Friedman Test**: Statistical analysis to estimate key length.
+  - **Frequency Analysis**: Uses English letter frequency to figure out the keyword shifts.
+
 ## Requirements
 
-- Python 3
-- `rich` library for TUI elements.
-  
-## Installation
+- **Python 3**
+- **rich** library for the TUI display.
+- **english_quadgrams.txt**: A file with English quadgram data for cryptanalysis (more on that below).
 
-1. **Clone the Repository**:
+## Setup
+
+1. **Clone This Repository**
    ```bash
    git clone https://github.com/jasonfan06/vigenere_cipher_tool.git
    cd vigenere_cipher_tool
