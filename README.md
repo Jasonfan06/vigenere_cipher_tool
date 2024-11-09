@@ -10,13 +10,12 @@ A no-nonsense, interactive tool for encrypting, decrypting, and breaking Vigenè
   - **Kasiski Examination**: Finds repeating patterns to guess the key length.
   - **Friedman Test**: Statistical analysis to estimate key length.
   - **Frequency Analysis**: Uses English letter frequency to figure out the keyword shifts.
-
+  - **NOTE**: This doesn’t guarantee 100% decryption. Generally, the longer the ciphertext, the better the chances of finding the correct text.
 ## Requirements
 
 - **Python 3**
 - **rich** library for the TUI display.
-- **english_quadgrams.txt**: A file with English quadgram data for cryptanalysis (more on that below).
-
+  
 ## Setup
 
 1. **Clone This Repository**
