@@ -20,10 +20,8 @@ from rich.text import Text
 from rich.box import ROUNDED
 from rich.align import Align
 
-# Initialize Rich Console
 console = Console()
 
-# English letter frequencies for frequency analysis
 LETTER_FREQUENCIES = {
     'A': 0.08167, 'B': 0.01492, 'C': 0.02782, 'D': 0.04253, 'E': 0.12702,
     'F': 0.02228, 'G': 0.02015, 'H': 0.06094, 'I': 0.06966, 'J': 0.00153,
@@ -250,7 +248,6 @@ def main():
         console.print("\n[bold red]Exiting the Vigenère Cipher Tool. Goodbye![/]", style="bold red")
         sys.exit()
 
-    # Ask if the user wants to perform another action
     while True:
         again = Prompt.ask("\n[bold]Would you like to perform another action? (y/n)[/]", choices=["y", "n"], default="y")
         if again.lower() == 'y':
